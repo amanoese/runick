@@ -1,17 +1,16 @@
 {
-  "name": "yukichant",
+  "name": "runick",
   "version": "3.0.5",
   "description": "",
   "license": "Apache-2.0",
-  "repository": "amanoese/yukichant",
+  "repository": "amanoese/runick",
   "author": "Seito Taka",
   "main": "src/index.js",
   "bin": {
-    "chant": "./src/cli.js"
+    "runick": "./src/cli.js"
   },
   "scripts": {
     "dev": "src/cli.js",
-    "json-generate": "raw_data/json_generator",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "deploy": "npm version patch && git push origin $(git describe --tags --abbrev=0)"
   },

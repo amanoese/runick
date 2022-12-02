@@ -1,39 +1,42 @@
-# yukichant
+# runick
 
-[![Actions Status](https://github.com/amanoese/yukichant/workflows/Node%20CI/badge.svg)](https://github.com/amanoese/yukichant/actions)
-[![npm version](http://img.shields.io/npm/v/yukichant.svg)](https://npmjs.org/package/yukichant)
+[![Actions Status](https://github.com/amanoese/runick/workflows/Node%20CI/badge.svg)](https://github.com/amanoese/runick/actions)
+[![npm version](http://img.shields.io/npm/v/runick.svg)](https://npmjs.org/package/runick)
 
-yukichantは、テキストデータを詠唱呪文に変換するコマンドです。  
-また変換した詠唱呪文は、元のテキストデータにデコードすることができます。  
+runickは、テキストデータをルーン文字にエンコードするコマンドです。  
+また変換したルーン文字は、元のテキストデータにデコードすることができます。  
+  
+エニグマのスクランブラーをの仕組みを利用することで変換したエンコード文字は法則性が掴みづらく、  
+知らない人にオカルトや中二病のミスリードを与えることができるかもしれません。
 
 ## Install
 
 ```bash
-$ npm install -g yukichant
+$ npm install -g runick
 ```
 
 ## Usage
 
 ```bash
 ## encode text
-$ echo Hello,World | chant
-巫女よ五行に元に斬る。戦慄の貪欲使命を隠し。嵐は記憶の行く手を砕ける。
+$ echo Hello,World | runick
+ᚢᛖᛝᛋᚻᛝᛠᛟᛝᛁᚠᚷᛝᛉᛖᛇᚾᚻᛤᛁᛞᛣᛁᛁ
 
 ## decode text
-$ echo 巫女よ五行に元に斬る。戦慄の貪欲使命を隠し。嵐は記憶の行く手を砕ける。 | chant -d
+$ echo ᚢᛖᛝᛋᚻᛝᛠᛟᛝᛁᚠᚷᛝᛉᛖᛇᚾᚻᛤᛁᛞᛣᛁᛁ | runick -d
 Hello,World
 
 ## Random Geneate Magic Words.
-$ chant
-水面も灰塵に蒼穹を抗え。
+$ runick
+ᛄᛖᛗᛣᚷᚱᛖᚳᚳᛟᚸᛇᚱᚣᛗᚾᛉᚼᛠᚠᚼᛄᛇᛗ
 ```
 
 ## Documentation for Developers
 [develop](/doc/develop.md)
 
 ## Thanks
-I named "yukichant" by Nagato Yuki-chan + chant .
-because I want to chant magic words like her.
+I named "runick" by an imitation of Aleister Crowley calling "magic" "magick".
+Sorry.Not related to Yu-Gi-Oh's "runick" category.
 
 ## LICENSE
 Apache-2.0

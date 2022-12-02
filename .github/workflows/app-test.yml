@@ -40,18 +40,18 @@ jobs:
     - run: node -v
     - uses: actions/checkout@v2
 
-    - name: install yukichant on local
+    - name: install runick on local
       run: |
         npm install
-        npm install -g ../yukichant
+        npm install -g ../runick
 
     - name: mkdir sandbox
       run: mkdir -p ./exec_dir
 
     - name: check cli path
-      run: which chant
+      run: which runick
       working-directory: ./exec_dir
 
-    - run: chant
+    - run: runick
       working-directory: ./exec_dir
 

@@ -1,6 +1,6 @@
-const message = `Usage: yukichant [options] [text]
+const message = `Usage: runick [options] [text]
 
-yukichant is convert text to magic spell.
+runick is convert text to magic spell.
 
 Arguments:
   text           input text (default: "")

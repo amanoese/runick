@@ -1,36 +1,32 @@
-import chant from '../src/index'
+import runick from '../src/index'
 import fs from 'fs'
-const meisi = JSON.parse(fs.readFileSync('./data/meisi.json', 'utf8'));
-const dousi = JSON.parse(fs.readFileSync('./data/dousi.json', 'utf8'));
 
-describe('chant',()=>{
+describe('runick',()=>{
   test('encode',()=>{
     // encodeしたときに、encodeあとの文字がランダムにどれか選ばれるため
     // 乱数を考慮して複数回テストを実行する。
     for (let i=0; i<1000; i++) {
-      expect(chant.encode('unko\n'))
-        .toMatch(/^(回廊に|回廊へ)(凍結|凍土に)(冥へ|冥界|冥府の|冥府より)(借り。)(血塗ら。)$/)
+      expect(runick.encode('unko'))
+        .toMatch(/^(ᛋ|ᚸ)(ᚩ|ᛗ)(ᛄ|ᛠ)(ᚻ|ᚪ)(ᚳ|ᛝ)(ᚩ|ᛗ)(ᛇ|ᚼ)(ᛈ|ᛣ)$/)
     }
   })
 
   test('decode',()=>{
-    expect(chant.decode(chant.encode('こんにちは')))
+    expect(runick.decode(runick.encode('こんにちは')))
       .toBe('こんにちは')
   })
 
   test('decode 改行文字込',()=>{
-    expect(chant.decode('回廊に凍結冥界借り。血塗ら。')).toBe('unko\n')
+    expect(runick.decode('ᚸᛗᛠᚪᚳᛗᛇᛈ')).toBe('unko')
   })
 
   test('dumpされた文字が途中でもdecodeできるかの確認',()=>{
-    // chant.encode('')
-    expect(chant.decode(chant.encode('💩💩').slice(0,-4)))
+    // runick.encode('')
+    expect(runick.decode(runick.encode('💩💩').slice(0,-4)))
       .toEqual(expect.stringContaining('💩'))
   })
   test('関係ない文字でもエラーが出ないことの確認',()=>{
-    // chant.encode('')
-    expect(()=>chant.decode('💩')).not.toThrow()
-    //下のテストは無理になった
-    //expect(chant.decode('💩')).toBe('')
+    // runick.encode('')
+    expect(()=>runick.decode('💩')).not.toThrow()
   })
 })
