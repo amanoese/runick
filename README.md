@@ -19,15 +19,15 @@ $ npm install -g runick
 ```bash
 ## encode text
 $ echo Hello,World | runick
-ᚢᛖᛝᛋᚻᛝᛠᛟᛝᛁᚠᚷᛝᛉᛖᛇᚾᚻᛤᛁᛞᛣᛁᛁ
+ᚢᛖᚷᛢᚫᚷᚼᛟᚷᛠᛏᚹᛝᚸᚦᛈᛁᚫᛋᛄᚻᛤᛄᛠ
 
 ## decode text
 $ echo ᚢᛖᛝᛋᚻᛝᛠᛟᛝᛁᚠᚷᛝᛉᛖᛇᚾᚻᛤᛁᛞᛣᛁᛁ | runick -d
-Hello,World
+ᚢᛖᚷᛢᚫᚷᚼᛟᚷᛠᛏᚹᛝᚸᚦᛈᛁᚫᛋᛄᚻᛤᛄᛠ
 
 ## Random Geneate Magic Words.
 $ runick
-ᛄᛖᛗᛣᚷᚱᛖᚳᚳᛟᚸᛇᚱᚣᛗᚾᛉᚼᛠᚠᚼᛄᛇᛗ
+ᛚᛋᚷᛏᛟᛥᚷᚠᚾᚠᛖᛉᛉᚾᛒᛄᚸᛚᛁᛁᚳᚣᚦᚫᚫᛟᛉᚻᚳᚫᛚᛗᚢᚾᚹᚦ
 ```
 
 ## Documentation for Developers
