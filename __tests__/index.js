@@ -7,7 +7,8 @@ describe('runick',()=>{
     // 乱数を考慮して複数回テストを実行する。
     for (let i=0; i<1000; i++) {
       expect(runick.encode('unko'))
-        .toMatch(/^(ᛋ|ᚸ)(ᚩ|ᛗ)(ᛄ|ᛠ)(ᚻ|ᚪ)(ᚳ|ᛝ)(ᚩ|ᛗ)(ᛇ|ᚼ)(ᛈ|ᛣ)$/)
+        .toMatch(/^[ᛢᛥ][ᚱᛗ][ᛇᚼ][ᚾᚫ][ᚷᛝ][ᚱᛗ][ᛈᛣ][ᛉᛤ]$/)
+
     }
   })
 
@@ -17,7 +18,7 @@ describe('runick',()=>{
   })
 
   test('decode 改行文字込',()=>{
-    expect(runick.decode('ᚸᛗᛠᚪᚳᛗᛇᛈ')).toBe('unko')
+    expect(runick.decode('ᛢᚱᚼᚫᚷᚱᛣᛤ')).toBe('unko')
   })
 
   test('dumpされた文字が途中でもdecodeできるかの確認',()=>{
